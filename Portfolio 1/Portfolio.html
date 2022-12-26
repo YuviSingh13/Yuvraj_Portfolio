@@ -13,16 +13,16 @@
         <div id="container">
             <nav>
                 <img src="" class="logo">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">CP Profiles</a></li>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#profiles">CP Profiles</a></li>
                     <!-- <li><a href="#">Projects</a></li> -->
-                    <li><a href="#">Contact Me</a></li>
-                    <!-- close icon -->
+                    <li><a href="#contact">Contact Me</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
                 </ul>
-                <!-- menu Icon -->
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
                 <p>Comptetive Programmer</p>
@@ -154,7 +154,7 @@
                     <div class="layer">
                         <h3>Social Media App</h3>
                         <p>Description</p>
-                        <a href="#"> <!-- icon --> </a>
+                        <a href="#"> <i class="fa-brands fa-github"></i> </a>
                     </div>
                 </div>
                 <div class="work">
@@ -162,7 +162,7 @@
                     <div class="layer">
                         <h3>Music App</h3>
                         <p>Description</p>
-                        <a href="#"> <!-- icon --> </a>
+                        <a href="#"> <i class="fa-brands fa-github"></i> </a>
                     </div>
                 </div>
                 <div class="work">
@@ -170,7 +170,7 @@
                     <div class="layer">
                         <h3>Online Shopping App</h3>
                         <p>Description</p>
-                        <a href="#"> <!-- icon --> </a>
+                        <a href="#"> <i class="fa-brands fa-github"></i> </a>
                     </div>
                 </div>
             </div>
@@ -188,8 +188,7 @@
                     <p>yuvrajshekhawatpilani@gmail.com</p>
                     <p>+91-9461243324</p>
                     <div class="social-icons">
-                        <a href="#"><!-- social media icon and link in href --></a>
-                        <a href="#"><!-- social media icon and link in href --></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
                         <a href="#"><!-- social media icon and link in href --></a>
                         <a href="#"><!-- social media icon and link in href --></a>
                     </div>
@@ -225,6 +224,19 @@
         event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab");
     }
+</script>
+
+<script>
+
+    var sidemenu = document.getElementById("sidemenu")
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+
 </script>
 
 </body>
