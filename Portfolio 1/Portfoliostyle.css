@@ -140,6 +140,7 @@ nav ul li a:hover::after{
 
 .tab-links.active-link::after{
     width: 50%;
+    
 }
 
 .tab-contents ul li{
@@ -365,74 +366,143 @@ form .btn2{
 
 /* ----------CSS for Small Screens---------- */
 
-nav .fas{
+nav .fa-solid{
     display: none;
 }
 
-@media only screen and(max-width: 600px){
-    #header{
-        background-image: url();
-    }
+/* Default styles */
 
-    .header-text{
-        margin-top: 100%;
-        font-size: 16px;
-    }
+/* Add styles for screens smaller than 600px */
+/* Default styles */
 
-    .header-text h1{
-        font-size: 30px;
+/* Add styles for screens smaller than 600px */
+@media only screen and (max-width: 600px) {
+    /* Header section */
+    #header {
+      background-image: url();
     }
-    nav .fas{
-        display: block;
-        font-size: 25px;
+    .header-text {
+      margin-top: 100%;
+      font-size: 16px;
     }
-    nav ul{
-        background: aqua;
-        position: fixed;
-        top: 0;
-        right: -200px;
-        width: 200px;
-        height: 100vh;
-        padding-top: 50px;
-        z-index: 2;
-        transition: right 0.5s;
+    .header-text h1 {
+      font-size: 30px;
     }
-    nav ul li{
-        display: block;
-        margin: 25px;
+    nav .fa-solid {
+      display: block;
+      font-size: 25px;
     }
-
-    nav ul .fas{
-        position: absolute;
-        top: 25px;
-        left: 25px;
-        cursor: pointer;
+    nav ul {
+      background: aqua;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 200px;
+      height: 100vh;
+      padding-top: 50px;
+      z-index: 2;
+      transition: right 0.5s;
     }
-
-    .sub-title{
-        font-size: 40px;
+    nav ul li {
+      display: block;
+      margin: 25px;
     }
-
-    .about-col-1, .about-col-2{
-        flex-basis: 100%;
+    nav ul .fa-solid {
+      position: absolute;
+      top: 25px;
+      left: 25px;
+      cursor: pointer;
     }
-
-    .about-col-1{
-        margin-bottom: 30px;
+    
+    /* About section */
+    .sub-title {
+      font-size: 40px;
     }
-
-    .about-col-2{
-        font-size: 14px;
+    .about-col-1,
+    .about-col-2 {
+      flex-basis: 100%;
     }
-    .tab-links{
-        font-size: 16px;
-        margin-right: 20px;
+    .about-col-1 {
+      margin-bottom: 30px;
     }
-
-    .contact-left, .contact-right{
-        flex-basis: 100%;
+    .about-col-2 {
+      font-size: 14px;
     }
-}
+    .tab-links {
+      font-size: 16px;
+      margin-right: 20px;
+    }
+    
+    /* CP Profiles section */
+    .profile-list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .profile-list div {
+      margin-bottom: 20px;
+    }
+    
+    /* Portfolio section */
+    .worklist {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .work {
+      margin: 20px 0;
+    }
+    .work img {
+      width: 100%;
+    }
+    .work .layer {
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      position: absolute;
+      text-align: center;
+      max-width: 300px;
+    }
+    .work .layer h3 {
+      font-size: 24px;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+    .work .layer p {
+      font-size: 14px;
+      color: #fff;
+    }
+    .work .layer a {
+      color: #fff;
+      font-size: 20px;
+      margin-top: 20px;
+    }
+    
+    /* Contact section */
+    .contact-left,
+    .contact-right {
+      flex-basis: 100%;
+    }
+    .contact-left p,
+    .contact-left .social-icons {
+      margin-bottom: 20px;
+    }
+    .contact-right input,
+    .contact-right textarea,
+    .contact-right button {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .contact-right button {
+      background-color: #555;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  }
 
 #msg{
     color: #61b752;
